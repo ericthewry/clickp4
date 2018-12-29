@@ -12,6 +12,7 @@
 
 #ifndef INIT_IPv4_MATCH 
 #define INIT_IPv4_MATCH  \
+	    ipv4 : valid; \
             ipv4.dst_addr : ternary; \
             ipv4.src_addr : ternary; \
             ipv4.proto    : ternary;
@@ -19,6 +20,7 @@
 
 #ifndef INIT_IPv6_MATCH
 #define INIT_IPv6_MATCH \
+        ipv6 : valid; \
         ipv6.dst_addr : ternary; \
         ipv6.src_addr : ternary; \
         ipv6.next_hdr : ternary;
@@ -27,12 +29,14 @@
 
 #ifndef INIT_TCP_MATCH
 #define INIT_TCP_MATCH \
+            tcp : valid; \
             tcp.dst_port : ternary; \
             tcp.src_port : ternary;
 #endif
 
 #ifndef INIT_UDP_MATCH
 #define INIT_UDP_MATCH \
+            udp : valid; \
             udp.dst_port : ternary; \
             udp.src_port : ternary;
 #endif
